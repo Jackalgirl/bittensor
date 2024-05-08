@@ -4347,7 +4347,7 @@ class subtensor:
             result = make_substrate_call_with_retry()
         except scalecodec.exceptions.RemainingScaleBytesNotEmptyException:
             bittensor.logging.error(
-                "Your wallet it legacy formatted, you need to run btcli stake --ammount 0 to reformat it."
+                "Your wallet is legacy formatted, you need to run btcli stake --amount 0 to reformat it."
             )
             return Balance(1000)
         return Balance(result.value["data"]["free"])
